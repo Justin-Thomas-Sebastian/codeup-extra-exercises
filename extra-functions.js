@@ -76,6 +76,34 @@ console.log("B is a vowel: " + isVowel("B")); // false
 console.log("i is a vowel: " + isVowel("i")); // true
 console.log("U is a vowel: " + isVowel("U")); // true
 
+// function that return true if a string has a lower case letter
+function hasLowerCase(str){
+    for(let char of str){
+        if(char === char.toLowerCase()){
+            return true;
+        }
+    }
+    return false;
+}
+
+console.log("'LkSJDKLJjLKJDF' has a lower case letter: " + hasLowerCase('LkSJDKLJjLKJDF')); // should be true
+console.log("'JUSTIN' has a lower case letter: " + hasLowerCase('JUSTIN')); // should be false
+
+
+// function that returns a reversed string
+function reverseString(str){
+    let newStr = "";
+
+    for(let i = str.length - 1; i >= 0; i-- ){
+        newStr += str[i];
+    }
+
+    return newStr;
+}
+
+console.log("The reverse of 'Justin' is: " + reverseString("Justin")); // should be "nitsuJ"
+
+
 /************ CHALLENGE FUNCTION DRILLS  ******************/
 
 // return random number from min to max, inclusive
