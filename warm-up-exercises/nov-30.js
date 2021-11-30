@@ -17,6 +17,7 @@ function multipleOfThreeOrFive(score){
     return score % 3 === 0 || score % 5 === 0;
 }
 
+
 console.log(" ");
 console.log(multipleOfThreeOrFive(10) ); // should be true
 console.log(multipleOfThreeOrFive(9) );  // should be true

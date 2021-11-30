@@ -49,8 +49,34 @@ function addFive(num){
 let addFiveTest = 10;
 console.log(`10 + 5 is: ${addFive(addFiveTest)}`); // should be 15
 
+// check if given number is a multiple of five
+function isMultipleOfFive(num){
+    return num % 5 === 0;
+}
 
-// CHALLENGE FUNCTION DRILLS
+let mult5test = 15;
+console.log("15 is divisible by 5: " + isMultipleOfFive(mult5test)); // should be true 
+
+// check if given character is a vowel
+function isVowel(letter){
+    let lowerLetter = letter.toLowerCase();
+    switch(lowerLetter){
+        case "a":
+        case "e":
+        case "i":
+        case "o":
+        case "u":
+            return true;
+        default:
+            return false;
+    }
+}
+
+console.log("B is a vowel: " + isVowel("B")); // false
+console.log("i is a vowel: " + isVowel("i")); // true
+console.log("U is a vowel: " + isVowel("U")); // true
+
+/************ CHALLENGE FUNCTION DRILLS  ******************/
 
 // return random number from min to max, inclusive
 function getRandomNumber(min, max){
