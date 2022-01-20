@@ -15,18 +15,18 @@ function checkUpperLower(str){
     let resultStr = "";
 
     for(let i = 0; i < str.length; i++){
-        if( !(/[a-zA-Z]/).test(str[i])){
+        if( !(/[a-zA-Z]/).test(str[i])){   // checks whether char is a letter
             resultStr += str[i] + " is not a character.\n";
 
-        } else if (str[i] === str[i].toUpperCase()){
+        } else if (str[i] === str[i].toUpperCase()){  // checks whether char is upper case
             resultStr += "letter " + str[i] + " is uppercase.\n";
 
-        } else {
+        } else {  // checks whether char is lower case
             resultStr += "letter " + str[i] + " is lowercase.\n";
         }
     }
     return resultStr;
 }
 
-let test = " "
-console.log(checkUpperLower("bJI*ENsd4f"));
+let test = "bJI*ENsd4f";
+console.log(checkUpperLower(test));
