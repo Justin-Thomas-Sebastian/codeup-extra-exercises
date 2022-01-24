@@ -1,4 +1,5 @@
-let strNum = "42958372";
+let test1 = "42958372";
+let test2 = "917485";
 
 function strSum(str){
     let sum = 0;
@@ -9,4 +10,5 @@ function strSum(str){
     return sum;
 }
 
-console.log(strSum(strNum));
+console.log(strSum(test1)); // should be 40
+console.log(strSum(test2)); // should be 34
