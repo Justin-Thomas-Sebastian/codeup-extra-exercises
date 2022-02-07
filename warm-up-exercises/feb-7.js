@@ -143,3 +143,134 @@ console.log(getFemaleFamilyMembers(family));
 
 // Create a function makeLongPetString() that when given the variable of pets,
 // returns a string of all property values with dashes separating each property value
+
+function makeLongPetString(pets){
+    return pets.reduce( (superPet, pet) => {
+        return superPet += `${pet.name}-${pet.age}-${pet.breed}-`;
+    }, "");
+}
+
+console.log(makeLongPetString(pets));
+
+// Create a function that when given an array of first names,
+// returns an array of the same names with a last name of Smith
+
+// input = ['Sally', 'Fred', 'Steve']
+// output = ['Sally Smith', 'Fred Smith', 'Steve']
+
+function appendSmith(names){
+   return names.map( name => name + " Smith");
+}
+
+console.log(appendSmith(['Sally', 'Fred', 'Steve']));
+
+// Create a function that when given an array of numbers,
+// return the sum of the even numbers
+
+let testNumArr = [0,1,2,3,4,5,6,7,8,9];
+
+function sumOfEvenNumbers(nums){
+    return nums.filter(num => num % 2 === 0).reduce( (a, b) => a + b);
+}
+
+console.log(sumOfEvenNumbers(testNumArr));
+
+// Create a function that when given an array of numbers,
+// return the sum of all numbers evenly divisible by 10
+
+let testNumArr2 = [];
+for(let i = 1; i <= 100; i++){  // creates test array of numbers 1 - 100
+    testNumArr2.push(i);
+}
+
+function sumOfNumsDivisibleByTen(nums){
+    return nums.filter( num => num % 10 === 0).reduce( (a, b) => a + b);
+}
+
+console.log(sumOfNumsDivisibleByTen(testNumArr2));
+
+// Create a function that when given an array of names,
+// return a string of all the first letters of each name
+
+let names = ["Justin", "Thomas", "Tuvera", "Sebastian"];
+
+function abbreviateNames(names, index){
+   return names.map( name => name[0]).reduce( (a , b)  => a + b);
+}
+
+console.log(abbreviateNames(names));
+
+// Create a function that when given an array of values,
+// returns an array of only the truthy values
+
+let testArrValues = [true, false, 1, 0, undefined, "", null, {name: "bob"}]; // output: [true, 1, {name: bob}]
+
+function returnTruthy(arr){
+    return arr.filter(element => !!element)
+}
+
+console.log(returnTruthy(testArrValues));
+
+// Create a function that when given an object,
+// returns the property values as an array of elements
+
+let testObj = {
+    name: "justin",
+    age: 30,
+    gender: "male"
+}
+function returnProperties(obj){
+    // let propArr = []
+    // for(let prop in obj){
+    //     propArr.push(prop);
+    // }
+    // return propArr;
+
+    /**   OR   **/
+
+    return Object.keys(obj);
+}
+
+console.log(returnProperties(testObj));
+
+
+// Create a function that when given three arguments:
+// a min num, a max num, an array of nums
+// will return the array of nums that are only between the min and max values, inclusive
+
+function returnWithinBounds(min, max, nums){
+    return nums.filter(num => (num >= min && num <= max))
+}
+
+console.log(returnWithinBounds(10, 40, testNumArr2));
+
+
+// Create a function that when given an array of strings,
+// returns an array of objects with properties for the given string value
+// and the length of the string and the string without vowels (not including y)
+
+function foo(strArr){
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+    return strArr.map( str => {
+        let charArr = str.split("");
+        let noVowelsArr = charArr.filter(char => !vowels.includes(char));
+        return {
+            value: str,
+            strLength: str.length,
+            withoutVowels: noVowelsArr.join("")
+        }
+    });
+}
+
+console.log(foo(names));
+
+
+
+
+
+
+
+
+
+
+
