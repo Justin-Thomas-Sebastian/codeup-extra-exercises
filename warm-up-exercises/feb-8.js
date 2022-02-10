@@ -4,15 +4,15 @@
 // expected output: [2,3,5,8,1,6,7,4]
 
 // using for of
-// function removeDuplicates(arr){
-//     let unique = [];
-//     for (let num of arr){
-//         if(!unique.includes(num)){
-//             unique.push(num);
-//         }
-//     }
-//     return unique;
-// }
+function removeDuplicates(arr){
+    let unique = [];
+    for (let num of arr){
+        if(!unique.includes(num)){
+            unique.push(num);
+        }
+    }
+    return unique;
+}
 
 // using reduce
 // function removeDuplicates(arr){
